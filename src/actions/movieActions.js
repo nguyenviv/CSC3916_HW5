@@ -72,3 +72,5 @@ export function fetchMovies() {
         }).catch((e) => console.log(e));
     }
 }
+
+// CREATE FUNCTION TO SAVE REVIEWS
