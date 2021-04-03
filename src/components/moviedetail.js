@@ -37,7 +37,6 @@ class MovieDetail extends Component {
                         <ListGroupItem><h4><BsStarFill/> {this.props.selectedMovie.avgRating}</h4></ListGroupItem>
                     </ListGroup>
                     <Card.Body>
-                        // NEED TO ADD TEXT BOXES TO ENTER REVIEWS AND RATINGS
                         {this.props.selectedMovie.reviews.map((review, i) =>
                             <p key={i}>
                                 <b>{review.username}</b>&nbsp; {review.review}
