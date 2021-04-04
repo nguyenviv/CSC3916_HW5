@@ -16,7 +16,7 @@ function Movie(props) {
         dispatch(fetchMovie(movieTitle));
     }
 
-    return (<MovieDetail movieId={movieTitle} />)
+    return (<MovieDetail movieTitle={movieTitle} />)
 }
 
 export default Movie;
