@@ -46,7 +46,7 @@ export function fetchMovie(title) {
             }
             return response.json()
         }).then((res) => {
-            dispatch(movieFetched(res));
+            dispatch(movieFetched(res[0]));
         }).catch((e) => console.log(e));
     }
 }
@@ -68,7 +68,7 @@ export function fetchMovies() {
             }
             return response.json()
         }).then((res) => {
-            dispatch(moviesFetched(res));
+            dispatch(moviesFetched(res[0]));
         }).catch((e) => console.log(e));
     }
 }
