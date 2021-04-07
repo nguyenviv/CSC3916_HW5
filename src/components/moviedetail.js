@@ -42,20 +42,8 @@ class MovieDetail extends Component {
                             <p key={i}>
                                 <b>{review.reviewer}</b>&nbsp; {review.review}
                                 &nbsp;  <BsStarFill /> {review.rating}
-                                <div>
-                                    <Form.Group controlId="reviewer">
-                                        <Form.Label>Reviewer</Form.Label>
-                                        <Form.Control onChange={this.updateDetails} value={this.state.details.reviewer} type="reviewer" placeholder="Enter reviewer name" />
-                                    </Form.Group>
 
-                                    <Form.Group controlId="rating">
-                                        <Form.Label>Rating</Form.Label>
-                                        <Form.Control onChange={this.updateDetails} value={this.state.details.rating}  type="rating" placeholder="Rating" />
-                                    </Form.Group>
-                                    <Button onClick={saveReview(this.props.title)}>Save review</Button>
-                                </div>
                             </p>
-
                         )}
                     </Card.Body>
                 </Card>
