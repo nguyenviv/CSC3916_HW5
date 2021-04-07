@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchMovie } from "../actions/movieActions";
+import {saveReview} from "../actions/movieActions";
 import {connect} from 'react-redux';
 import {Button, Card, Form, ListGroup, ListGroupItem} from 'react-bootstrap';
 import { BsStarFill } from 'react-icons/bs'
@@ -42,7 +43,6 @@ class MovieDetail extends Component {
                                 <b>{review.reviewer}</b>&nbsp; {review.review}
                                 &nbsp;  <BsStarFill /> {review.rating}
 
-
                                     <Form.Group controlId="reviewer">
                                         <Form.Label>Reviewer</Form.Label>
                                         <Form.Control onChange={this.updateDetails} value={this.state.details.reviewer} type="reviewer" placeholder="Enter reviewer name" />
@@ -52,10 +52,10 @@ class MovieDetail extends Component {
                                         <Form.Label>Rating</Form.Label>
                                         <Form.Control onChange={this.updateDetails} value={this.state.details.rating}  type="rating" placeholder="Rating" />
                                     </Form.Group>
-                                    <Button onClick={this.login}>Save review</Button>
-
+                                    <Button onClick={saveReview(this.props.title)}>Save review</Button>
 
                             </p>
+
                         )}
                     </Card.Body>
                 </Card>
