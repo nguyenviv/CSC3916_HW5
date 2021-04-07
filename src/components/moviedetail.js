@@ -42,7 +42,7 @@ class MovieDetail extends Component {
                                 <b>{review.reviewer}</b>&nbsp; {review.review}
                                 &nbsp;  <BsStarFill /> {review.rating}
 
-                                <Form className='form-horizontal'>
+
                                     <Form.Group controlId="reviewer">
                                         <Form.Label>Reviewer</Form.Label>
                                         <Form.Control onChange={this.updateDetails} value={this.state.details.reviewer} type="reviewer" placeholder="Enter reviewer name" />
@@ -53,7 +53,7 @@ class MovieDetail extends Component {
                                         <Form.Control onChange={this.updateDetails} value={this.state.details.rating}  type="rating" placeholder="Rating" />
                                     </Form.Group>
                                     <Button onClick={this.login}>Save review</Button>
-                                </Form>
+
 
                             </p>
                         )}
