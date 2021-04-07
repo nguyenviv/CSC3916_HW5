@@ -42,10 +42,18 @@ class MovieDetail extends Component {
                             <p key={i}>
                                 <b>{review.reviewer}</b>&nbsp; {review.review}
                                 &nbsp;  <BsStarFill /> {review.rating}
-
                             </p>
                         )}
                     </Card.Body>
+
+                    <Card.Body>
+                        <Form.Group controlId="reviewer">
+                            <Form.Label>Reviewer</Form.Label>
+                            <Form.Control type="reviewer" placeholder="Enter reviewer name" />
+                        </Form.Group>
+                        <Button onClick={saveReview}>Save Review</Button>
+                    </Card.Body>
+
                 </Card>
             )
         }
