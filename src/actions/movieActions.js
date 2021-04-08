@@ -23,6 +23,13 @@ function movieSet(movie) {
     }
 }
 
+function reviewPost(movie){
+    return {
+        type: actionTypes.POST_REVIEW,
+        selectedMovie: movie
+    }
+}
+
 export function setMovie(movie) {
     return dispatch => {
         dispatch(movieSet(movie));
@@ -91,7 +98,7 @@ export function saveReview(title){
             }
             return response.json()
         }).then((res) => {
-            dispatch(movieFetched(res[0]));
+            dispatch(reviewPost(res[0]));
         }).catch((e) => console.log(e));
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { fetchMovie } from "../actions/movieActions";
 import {saveReview} from "../actions/movieActions";
 import {connect} from 'react-redux';
-import {Button, Card, Form, ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Button, Card, Dropdown, DropdownButton, Form, ListGroup, ListGroupItem} from 'react-bootstrap';
 import { BsStarFill } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
 
@@ -48,9 +48,28 @@ class MovieDetail extends Component {
 
                     <Card.Body>
                         <Form.Group controlId="reviewer">
-                            <Form.Label>Reviewer</Form.Label>
+                            <Form.Label>Reviewer Name</Form.Label>
                             <Form.Control type="reviewer" placeholder="Enter reviewer name" />
                         </Form.Group>
+                        <Form.Group controlId="quote">
+                            <Form.Label>Comment</Form.Label>
+                            <Form.Control type="quote" placeholder="Enter comment" />
+                        </Form.Group>
+
+                        <Dropdown>
+                            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                Rating (1-5)
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">1</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">2</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">3</Dropdown.Item>
+                                <Dropdown.Item href="#/action-4">4</Dropdown.Item>
+                                <Dropdown.Item href="#/action-5">5</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+
                         <Button onClick={saveReview}>Save Review</Button>
                     </Card.Body>
 
