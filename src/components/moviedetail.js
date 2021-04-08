@@ -56,19 +56,13 @@ class MovieDetail extends Component {
                             <Form.Control type="quote" placeholder="Enter comment" />
                         </Form.Group>
 
-                        <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                Rating (1-5)
-                            </Dropdown.Toggle>
-
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">1</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">2</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">3</Dropdown.Item>
-                                <Dropdown.Item href="#/action-4">4</Dropdown.Item>
-                                <Dropdown.Item href="#/action-5">5</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
+                        <DropdownButton id="dropdown-basic-button" title="Rating 1-5">
+                            <Dropdown.Item href="#/action-1">1</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">2</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">3</Dropdown.Item>
+                            <Dropdown.Item href="#/action-4">4</Dropdown.Item>
+                            <Dropdown.Item href="#/action-5">5</Dropdown.Item>
+                        </DropdownButton>
 
                         <Button onClick={saveReview}>Save Review</Button>
                     </Card.Body>
