@@ -15,6 +15,29 @@ class MovieDetail extends Component {
         }
     }
 
+    constructor(props){
+        super(props);
+
+        this.updateDetails = this.updateDetails.bind(this);
+        this.moviedetail = this.moviedetail.bind(this);
+        this.state = {
+            details:{
+                reviewer: '',
+                quote: '',
+                rating: ''
+            }
+        };
+    }
+
+    updateDetails(event){
+        let updateDetails = Object.assign({}, this.state.details);
+
+        updateDetails[event.target.id] = event.target.value;
+        this.setState({
+            details: updateDetails
+        });
+    }
+
     render() {
         const DetailInfo = () => {
             if (!this.props.selectedMovie) {
@@ -48,15 +71,15 @@ class MovieDetail extends Component {
                     <Card.Body>
                         <Form.Group controlId="reviewer">
                             <Form.Label>Reviewer Name</Form.Label>
-                            <Form.Control type="reviewer" placeholder="Enter reviewer name" />
+                            <Form.Control onChange={this.updateDetails} value={this.state.details.reviewer}  type="reviewer" placeholder="Enter reviewer name" />
                         </Form.Group>
                         <Form.Group controlId="quote">
                             <Form.Label>Comment</Form.Label>
-                            <Form.Control type="quote" placeholder="Enter comment" />
+                            <Form.Control onChange={this.updateDetails} value={this.state.details.quote}  type="quote" placeholder="Enter comment" />
                         </Form.Group>
                         <Form.Group controlId="rating">
                             <Form.Label>Rating</Form.Label>
-                            <Form.Control type="rating" placeholder="Enter rating (1-5)" />
+                            <Form.Control onChange={this.updateDetails} value={this.state.details.rating}  type="rating" placeholder="Enter rating (1-5)" />
                         </Form.Group>
                         <div>
                             <Form.Label>              </Form.Label>
