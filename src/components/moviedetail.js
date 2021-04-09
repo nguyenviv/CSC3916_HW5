@@ -56,13 +56,14 @@ class MovieDetail extends Component {
                             <Form.Control type="quote" placeholder="Enter comment" />
                         </Form.Group>
 
-                        <DropdownButton id="dropdown-basic-button" title="Rating 1-5">
-                            <Dropdown.Item href="#/action-1">1</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">2</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">3</Dropdown.Item>
-                            <Dropdown.Item href="#/action-4">4</Dropdown.Item>
-                            <Dropdown.Item href="#/action-5">5</Dropdown.Item>
-                        </DropdownButton>
+                        <div id="container">
+                            <div id="1" className="star">1</div>
+                            <div id="2" className="star">2</div>
+                            <div id="3" className="star">3</div>
+                            <div id="4" className="star">4</div>
+                            <div id="5" className="star">5</div>
+                        </div>
+
                         <div>
                             <Form.Label>              </Form.Label>
                         </div>
