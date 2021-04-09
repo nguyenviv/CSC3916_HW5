@@ -81,7 +81,7 @@ export function fetchMovies() {
 }
 
 // FUNCTION TO SAVE REVIEWS
-export function saveReview(title){
+export function saveReview(data){
     const env = runtimeEnv();
     return dispatch => {
         return fetch(`${env.REACT_APP_API_URL}/movies/${title}?reviews=true`, {
@@ -91,6 +91,7 @@ export function saveReview(title){
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('token')
             },
+            body: JSON.stringify(data),
             mode: 'cors'
         }).then((response) => {
             if (!response.ok) {

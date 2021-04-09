@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {Button, Card, Dropdown, DropdownButton, Form, ListGroup, ListGroupItem} from 'react-bootstrap';
 import { BsStarFill } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
+import {submitRegister} from "../actions/authActions";
 
 class MovieDetail extends Component {
 
@@ -36,6 +37,11 @@ class MovieDetail extends Component {
         this.setState({
             details: updateDetails
         });
+    }
+
+    saveReview(){
+        const {dispatch} = this.props;
+        dispatch(saveReview(this.state.details));
     }
 
     render() {
