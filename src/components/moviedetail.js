@@ -3,7 +3,6 @@ import { fetchMovie } from "../actions/movieActions";
 import {saveReview} from "../actions/movieActions";
 import {connect} from 'react-redux';
 import {Button, Card, Dropdown, DropdownButton, Form, ListGroup, ListGroupItem} from 'react-bootstrap';
-import StarRating from 'react-bootstrap-star-rating';
 import { BsStarFill } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
 
