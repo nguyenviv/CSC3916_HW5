@@ -52,21 +52,23 @@ class MovieDetail extends Component {
                             <Form.Label>Reviewer Name</Form.Label>
                             <Form.Control type="reviewer" placeholder="Enter reviewer name" />
                         </Form.Group>
+
                         <Form.Group controlId="quote">
                             <Form.Label>Comment</Form.Label>
                             <Form.Control type="quote" placeholder="Enter comment" />
                         </Form.Group>
 
-                        <StarRating
-                            defaultValue={5}
-                            min={0}
-                            max={5}
-                            step={0.5} />
+                        <Form.Group controlId="rating">
+                            <Form.Label>Rating</Form.Label>
+                            <Form.Control type="rating" placeholder="Enter rating (1-5)" />
+                        </Form.Group>
 
                         <div>
                             <Form.Label>              </Form.Label>
                         </div>
+
                         <Button onClick={saveReview}>Save Review</Button>
+
                     </Card.Body>
 
                 </Card>
