@@ -3,6 +3,7 @@ import { fetchMovie } from "../actions/movieActions";
 import {saveReview} from "../actions/movieActions";
 import {connect} from 'react-redux';
 import {Button, Card, Dropdown, DropdownButton, Form, ListGroup, ListGroupItem} from 'react-bootstrap';
+import StarRating from 'react-bootstrap-star-rating';
 import { BsStarFill } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
 
@@ -56,13 +57,11 @@ class MovieDetail extends Component {
                             <Form.Control type="quote" placeholder="Enter comment" />
                         </Form.Group>
 
-                        <div id="container">
-                            <div id="1" className="star">1</div>
-                            <div id="2" className="star">2</div>
-                            <div id="3" className="star">3</div>
-                            <div id="4" className="star">4</div>
-                            <div id="5" className="star">5</div>
-                        </div>
+                        <StarRating
+                            defaultValue={5}
+                            min={0}
+                            max={5}
+                            step={0.5} />
 
                         <div>
                             <Form.Label>              </Form.Label>
