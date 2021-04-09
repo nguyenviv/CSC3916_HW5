@@ -45,29 +45,23 @@ class MovieDetail extends Component {
                             </p>
                         )}
                     </Card.Body>
-
                     <Card.Body>
                         <Form.Group controlId="reviewer">
                             <Form.Label>Reviewer Name</Form.Label>
                             <Form.Control type="reviewer" placeholder="Enter reviewer name" />
                         </Form.Group>
-
                         <Form.Group controlId="quote">
                             <Form.Label>Comment</Form.Label>
                             <Form.Control type="quote" placeholder="Enter comment" />
                         </Form.Group>
-
                         <Form.Group controlId="rating">
                             <Form.Label>Rating</Form.Label>
                             <Form.Control type="rating" placeholder="Enter rating (1-5)" />
                         </Form.Group>
-
                         <div>
                             <Form.Label>              </Form.Label>
                         </div>
-
                         <Button onClick={saveReview}>Save Review</Button>
-
                     </Card.Body>
 
                 </Card>
