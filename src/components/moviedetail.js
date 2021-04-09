@@ -8,6 +8,19 @@ import { Image } from 'react-bootstrap';
 
 class MovieDetail extends Component {
 
+    constructor(props) {
+        super(props);
+        this.updateDetails = this.updateDetails.bind(this);
+        this.saveReview = this.saveReview.bind(this);
+        this.state = {
+            details:{
+                reviewer: '',
+                quote: '',
+                rating: ''
+            }
+        };
+    }
+
     componentDidMount() {
         const {dispatch} = this.props;
         if (this.props.selectedMovie == null) {

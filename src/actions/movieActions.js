@@ -80,7 +80,7 @@ export function fetchMovies() {
     }
 }
 
-// CREATE FUNCTION TO SAVE REVIEWS
+// FUNCTION TO SAVE REVIEWS
 export function saveReview(title){
     const env = runtimeEnv();
     return dispatch => {
