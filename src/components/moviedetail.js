@@ -20,7 +20,7 @@ class MovieDetail extends Component {
         super(props);
 
         this.updateDetails = this.updateDetails.bind(this);
-        this.moviedetail = this.moviedetail.bind(this);
+        this.saveReview = this.saveReview.bind(this);
         this.state = {
             details:{
                 reviewer: '',
@@ -41,7 +41,7 @@ class MovieDetail extends Component {
 
     saveReview(){
         const {dispatch} = this.props;
-        dispatch(saveReview(this.state.details));
+        dispatch(saveReview(this.props.title, this.state.details));
     }
 
     render() {
@@ -90,7 +90,7 @@ class MovieDetail extends Component {
                         <div>
                             <Form.Label>              </Form.Label>
                         </div>
-                        <Button onClick={saveReview}>Save Review</Button>
+                        <Button onClick={this.saveReview}>Save Review</Button>
                     </Card.Body>
 
                 </Card>
