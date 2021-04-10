@@ -39,12 +39,14 @@ class MovieDetail extends Component {
         });
     }
 
-    saveReview(){
+    /*saveReview(){
         const {dispatch} = this.props;
         dispatch(saveReview(this.props.title, this.state.details));
-    }
+    }*/
 
     render() {
+        const {dispatch} = this.props;
+        dispatch(saveReview(this.props.title, this.state.details));
         const DetailInfo = () => {
             if (!this.props.selectedMovie) {
                 return <div>Loading....</div>
