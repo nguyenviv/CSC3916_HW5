@@ -39,10 +39,10 @@ class MovieDetail extends Component {
         });
     }
 
-    /*saveReview(){
+    saveReview(){
         const {dispatch} = this.props;
         dispatch(saveReview(this.props.title, this.state.details));
-    }*/
+    }
 
     render() {
         const DetailInfo = () => {
