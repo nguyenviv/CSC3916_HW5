@@ -13,7 +13,6 @@ class MovieDetail extends Component {
         const {dispatch} = this.props;
         if (this.props.selectedMovie == null) {
             dispatch(fetchMovie(this.props.title));
-            dispatch(saveReview(this.props.title, this.state.details));
         }
     }
 
@@ -46,8 +45,6 @@ class MovieDetail extends Component {
     }*/
 
     render() {
-       /* const {dispatch} = this.props;
-        dispatch(saveReview(this.props.title, this.state.details));*/
         const DetailInfo = () => {
             if (!this.props.selectedMovie) {
                 return <div>Loading....</div>
