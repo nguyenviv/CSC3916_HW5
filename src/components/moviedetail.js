@@ -9,12 +9,12 @@ import {submitRegister} from "../actions/authActions";
 
 class MovieDetail extends Component {
 
-    componentDidMount() {
+    /*componentDidMount() {
         const {dispatch} = this.props;
         if (this.props.selectedMovie == null) {
             dispatch(fetchMovie(this.props.title));
         }
-    }
+    }*/
 
     constructor(props){
         super(props);
@@ -42,6 +42,13 @@ class MovieDetail extends Component {
     saveReview(){
         const {dispatch} = this.props;
         dispatch(saveReview(this.props.title, this.state.details));
+    }
+
+    componentDidMount() {
+        const {dispatch} = this.props;
+        if (this.props.selectedMovie == null) {
+            dispatch(fetchMovie(this.props.title));
+        }
     }
 
     render() {
