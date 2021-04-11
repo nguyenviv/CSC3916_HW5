@@ -9,14 +9,14 @@ import {submitRegister} from "../actions/authActions";
 
 class MovieDetail extends Component {
 
-    /*componentDidMount() {
+    componentDidMount() {
         const {dispatch} = this.props;
         if (this.props.selectedMovie == null) {
             dispatch(fetchMovie(this.props.title));
         }
-    }*/
+    }
 
-    constructor(props){
+    /*constructor(props){
         super(props);
 
         this.updateDetails = this.updateDetails.bind(this);
@@ -28,7 +28,7 @@ class MovieDetail extends Component {
                 rating: ''
             }
         };
-    }
+    }*/
 
     updateDetails(event){
         let updateDetails = Object.assign({}, this.state.details);
@@ -44,14 +44,10 @@ class MovieDetail extends Component {
         dispatch(saveReview(this.props.title, this.state.details));
     }
 
-    componentDidMount() {
-        const {dispatch} = this.props;
-        if (this.props.selectedMovie == null) {
-            dispatch(fetchMovie(this.props.title));
-        }
-    }
-
     render() {
+
+        this.updateDetails = this.updateDetails.bind(this);
+        this.saveReview = this.saveReview.bind(this);
 
         const DetailInfo = () => {
             if (!this.props.selectedMovie) {
