@@ -16,7 +16,7 @@ class MovieDetail extends Component {
         }
     }
 
-    /*constructor(props){
+    constructor(props){
         super(props);
 
         this.updateDetails = this.updateDetails.bind(this);
@@ -28,7 +28,7 @@ class MovieDetail extends Component {
                 rating: ''
             }
         };
-    }*/
+    }
 
     updateDetails(event){
         let updateDetails = Object.assign({}, this.state.details);
@@ -45,9 +45,6 @@ class MovieDetail extends Component {
     }
 
     render() {
-
-        this.updateDetails = this.updateDetails.bind(this);
-        this.saveReview = this.saveReview.bind(this);
 
         const DetailInfo = () => {
             if (!this.props.selectedMovie) {
